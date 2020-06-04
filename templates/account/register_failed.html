@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block title %}Register failed!{% endblock %}
+
+{% block content %}
+    <h1>Sorry, something was wrong!</h1>
+    <p>Your account has not been successfully created.
+    You can try <a href="{% url 'register' %}">register</a> again.</p>
+{% endblock %}
