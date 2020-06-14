@@ -22,8 +22,11 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('account/', include('account.urls')),
-    path('', LoginView.as_view(), name='login'),
-    path('images/', include('images.urls', namespace='images')),
+    path('login/', LoginView.as_view(), name='login'),
+    path('', include('account.urls'), name='index'),
+    path('book/', include('book.urls')),
+    path('book_api/', include('book.api.urls', namespace='book_api')),
+    path('account_api/', include('account.api.urls', namespace='account_api')),
 ]
 
 if settings.DEBUG:

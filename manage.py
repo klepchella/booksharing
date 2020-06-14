@@ -19,3 +19,8 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+if len(sys.argv) > 1 and sys.argv[1] == "test":
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "bookshraing.test_settings")
+else:
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "bookshraing.settings")

@@ -1,0 +1,44 @@
+## README
+
+Сервис представляет собой бэкенд для вымышленного сервиса по загрузке и обмену книг, загружаемых пользователями.
+
+Сервис имеет два приложения:
+* account (для работы с аккаунтами пользователей)
+* book (для работы с книгами)
+
+### Примеры API-запросов
+#### Account:
+1. http://localhost:9000/account_api/account/login/
+(вход пользователя в систему)
+2. http://localhost:9000/account_api/account/logout/
+(выход из системы)
+3. http://localhost:9000/account_api/account/registration/
+(регистрация пользователя в системе)
+
+#### Book:
+
+1. http://localhost:9000/book_api/books/list/
+(общий каталог книг, не скрытых администратором системы)
+1. http://localhost:9000/book_api/books/list_favourite/
+(список избранных пользователем книг)
+1. http://localhost:9000/book_api/books/<pk>/to_favourite/
+(добавить или убрать книгу из избранных, pk - pk книги,
+необходимо передать дополнительный параметр to_favourite = True
+(добавить в избранное)/False(удалить из избранного))
+1. http://localhost:9000/book_api/books/list_uploaded/
+(список загруженных пользователем книг)
+1. http://localhost:9000/book_api/books/<pk>/
+(детальная информация о книге, pk = pk книги)
+1. http://localhost:9000/book_api/books/<pk>/create/
+(загрузить книгу; запрос имеет параметр create = True(создать)/False
+(обновить) книгу)
+1. http://localhost:9000/book_api/books/<pk>/update/
+(обновить информацию о книге; запрос имеет параметр create = True
+(создать)/False
+(обновить) книгу)
+1. http://localhost:9000/book_api/books/<pk>/delete/
+(удалить книгу)
+1. http://localhost:9000/book_api/books/<pk>/download/
+(скачать книгу)
+
+Также доступна админка для администратора сайта, которая позволяет скрывать книги из видимых.

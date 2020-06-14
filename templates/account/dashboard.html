@@ -3,8 +3,12 @@
 {%block title %}Dashboard{% endblock %}
 {% block content %}
     <h1>Dashboard</h1>
-    <p>Welcome to your dashboard!
-    Your can <a href="{% url "edit" %}">edit your profile</a> or <a href="
-{% url "password_change" %}">change your password</a>.
+    <p>
+        Welcome to your dashboard! Your can
+        <a href="{% url "edit" %}">edit your profile</a>
+        or <a href="{% url "password_change" %}">change your password</a>.
     </p>
+<p>Also you can <a href="{% url "load_book" %}">load</a> the book</p>
+<p>See <a href="{% url "favourite_books" %}">favourite</a> books</p>
+<p>See <a href="{% url "uploaded_books" %}">uploaded</a> books</p>
 {% endblock %}

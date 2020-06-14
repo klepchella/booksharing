@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}{{ books_type }} books{% endblock %}
+
+{% block content %}
+    <h1>List of your {{ books_type }} books</h1>
+    {% if books %}
+    <ul>
+    {% for book in books %}
+        <li><p>{{ book.author }}</p>
+            <p>{{ book.name }};
+                {{ book.the_year_of_publishing }}</p>
+            <p>{{ book.cloud_link }}</p>
+            <p>{{ book.file }}</p>
+            <p><img src="{{ MEDIA_URL }}{{ book.cover }}"/></p>
+            <p>{{ MEDIA_URL }}:{{ book.cover }}</p>
+            <p>{{book.cover.url}}</p>
+            <p>{{ book.is_favourite }}</p></li>
+    {% endfor %}
+    </ul>
+    {% else %}
+    <p>No {{ books_type }} books</p>
+    {% endif %}
+{% endblock %}

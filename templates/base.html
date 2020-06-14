@@ -11,7 +11,7 @@
 <body>
     <div id="header">
         <span class="logo">Bookmarks</span>
-        {% if request.user.is_authentificated %}
+        {% if request.user.is_authenticated %}
             <ul class="menu">
 
                 <li>{% if section == 'dashboard' %}
@@ -35,7 +35,7 @@
             </ul>
         {% endif %}
     <span class="user">
-        {% if request.user.is_autentificated %}
+        {% if request.user.is_authenticated %}
             Hello {{ request.user.first_name }},
             <a href="{% url "logout" %}">Logout</a>
         {% else %}

@@ -1,0 +1,6 @@
+LOGIN_SUCCESSFUL = 'Вход успешно произведён'
+LOGIN_FAILED = 'Произошла ошибка!'
+REGISTRATION_SUCCESSFUL = 'Пользователь успешно создан!'
+USER_ALREADY_EXISITS = 'Пользователь с таким username уже существует!'
+LOGOUT_SUCCESSFUL = 'Вы успешно разлогинились!'
+LOGOUT_ALREADY = 'Вы уже разлогинены!'

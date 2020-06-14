@@ -69,7 +69,6 @@ def register(request):
                 }
             )
         else:
-            # todo: обработка ошибок (напр. что логин уже используется)
             return render(
                 request,
                 'account/register_failed.html',
